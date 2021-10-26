@@ -67,7 +67,8 @@ resultado = primerNumero + segundoNumero;
 function mostrar(mensaje) {
 console.log(mensaje);
 }
-let num1 = parseFloat(prompt("Introduce un numero"));
+//parseInt no me toma los numeros con decimales, por eso uso parseFloat o Number
+let num1 = parseFloat(prompt("Introduce un numero")); 
 let num2 = parseFloat(prompt("Introduce el siguiente numero"));
 //Llamamos primero a sumar y luego a mostrar
 sumar(num1, num2);
