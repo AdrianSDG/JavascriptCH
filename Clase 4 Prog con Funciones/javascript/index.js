@@ -40,9 +40,35 @@ function otraAccion(dato){
 otraAccion();
 otraAccion("Bienvenidos");
 
+
 function accionConc(dato1, dato2){
     document.write("<p style='color: green'>" + dato1 +" "+ dato2 + "</p>");
 }
 accionConc();
 accionConc("Hola");
 accionConc("hola", "Señor");
+//Poniendo (dato1="algo", dato2="algo") se ponen datos por defecto en el caso
+//de que no se introduzcan otros
+function accionConc2(dato1="NO", dato2="HAY NADA"){
+    document.write("<p style='color: black'>" + dato1 +" "+ dato2 + "</p>");
+}
+accionConc2();
+accionConc2("Hola");
+accionConc2("hola", "Señor");
+
+
+//Declaración de variable para guardar el resultado de la suma
+let resultado = 0;
+//Función que suma dos números y asigna a resultado
+function sumar(primerNumero, segundoNumero) {
+resultado = primerNumero + segundoNumero;
+}
+//Función que muestra resultado por consola
+function mostrar(mensaje) {
+console.log(mensaje);
+}
+let num1 = parseFloat(prompt("Introduce un numero"));
+let num2 = parseFloat(prompt("Introduce el siguiente numero"));
+//Llamamos primero a sumar y luego a mostrar
+sumar(num1, num2);
+mostrar(resultado);
