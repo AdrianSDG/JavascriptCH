@@ -32,10 +32,17 @@ accion(suma);
 
 function otraAccion(dato){
     if(dato){
-        document.write("<p style='color: red'>" + dato + "</p>");
+        document.write("<p style='color: black'>" + dato + "</p>");
     }else{
-        document.write("<p style='color: red'>No hay dato</p>");
+        document.write("<p style='color: black'>No hay dato</p>");
     }
 }
 otraAccion();
 otraAccion("Bienvenidos");
+
+function accionConc(dato1, dato2){
+    document.write("<p style='color: green'>" + dato1 +" "+ dato2 + "</p>");
+}
+accionConc();
+accionConc("Hola");
+accionConc("hola", "Señor");
