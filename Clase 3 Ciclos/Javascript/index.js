@@ -1,4 +1,4 @@
-console.log("hola, funcionando");
+console.log("hola, clase 3");
 
 //Sintaxis
 /*for(desde; hasta; actualización) {
