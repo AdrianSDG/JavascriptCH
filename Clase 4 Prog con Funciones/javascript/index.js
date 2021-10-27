@@ -98,6 +98,22 @@ function calculadora(primerNumero, segundoNumero, operacion) {
     console.log (aLgo);
     document.write(calculadora(10, 10, "*"));
 
-    
+//Entrega
+let kilaje = 0;
+function entrenador(){
+    let dato1 = parseFloat (prompt("Indica el kilaje total para tren superior delantero"));
+    let dato2 = parseFloat (prompt("Indica el kilaje total para espalda"));
+    let dato3 = parseFloat (prompt("Indica el kilaje total para piernas"));
+    let dato4 = parseFloat (prompt("Indica las repeticiones de esas rutinas en la semana"));
+    //realizo los calculos
+    kilaje = (dato1 + dato2 + dato3) * dato4;
+    if (kilaje < 100){
+        alert("Manten una semana y aumenta el peso de " + kilaje + " kg unos 50kg")
+    }else if(kilaje >= 100 && kilaje <= 200){
+        alert("Los "+ kilaje + " kg estan bien, manten el peso pero aumenta las repeticiones en la semana")
+    }else if( kilaje > 200){
+        alert("tu peso de "+ kilaje +" kg ya es suficiente por ahora, coordinemos para nuevos ejercicios")
+    } 
+}
 
 
