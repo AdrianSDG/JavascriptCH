@@ -112,7 +112,7 @@ function entrenador(){
     }else if(kilaje >= 100 && kilaje <= 200){
         alert("Los "+ kilaje + " kg estan bien, manten el peso pero aumenta las repeticiones en la semana")
     }else if( kilaje > 200){
-        alert("tu peso de "+ kilaje +" kg ya es suficiente por ahora, coordinemos para nuevos ejercicios")
+        alert("Tu peso de "+ kilaje +" kg ya es suficiente por ahora, coordinemos para nuevos ejercicios")
     } 
 }
 
