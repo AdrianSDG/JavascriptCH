@@ -74,4 +74,30 @@ let num2 = parseFloat(prompt("Introduce el siguiente numero"));
 sumar(num1, num2);
 mostrar(resultado);
 
+//Calculadora
+function calculadora(primerNumero, segundoNumero, operacion) {
+    switch (operacion) {
+    case "+":
+    return primerNumero + segundoNumero;
+    break;
+    case "-":
+    return primerNumero - segundoNumero;
+    break;
+    case "*":
+    return primerNumero * segundoNumero;
+    break;
+    case "/":
+    return primerNumero / segundoNumero;
+    break;
+    default:
+    return 0;
+    break;
+    }
+    }
+    let aLgo = (calculadora(10, 5, "*"));
+    console.log (aLgo);
+    document.write(calculadora(10, 10, "*"));
+
+    
+
 
