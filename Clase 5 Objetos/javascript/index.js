@@ -35,10 +35,18 @@ document.write("<p>"+ objetoUno.nombre +"</p>");
 document.write("<p>"+ objetoUno.precio +"</p>");
 
 if(objetoUno.disponible){
-    document.write("El "+ objetoUno.nombre +" que tanto deseas cuesta "+ objetoUno.precio +" Dolares ,¿Los tienes?");
+    document.write("<p style='color: green'>El "+ objetoUno.nombre +" que tanto deseas cuesta "+ objetoUno.precio +" Dolares ,¿Los tienes?</p>");
 }else{
-    document.write("No se encuentra stock de "+ objetoUno.nombre +" por el momento");
+    document.write("<p style='color: red'>No se encuentra stock de "+ objetoUno.nombre +" por el momento</p>");
 }
 
+//Supongamos viene otro comprador, puedo entonces cambiar la disponibilidad por fuera del objeto
+objetoUno.disponible = false
+
+if(objetoUno.disponible){
+    document.write("<p style='color: green>El "+ objetoUno.nombre +" que tanto deseas cuesta "+ objetoUno.precio +" Dolares ,¿Los tienes?</p>");
+}else{
+    document.write("<p style='color: red'>No se encuentra stock de "+ objetoUno.nombre +" por el momento</p>");
+}
 
 
