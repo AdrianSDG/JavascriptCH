@@ -128,3 +128,6 @@ function hidratacion(){
         alert("El consumo de "+ consumir +" Litros´en la semana no es malo en si, pero llevandolo a un promedio de 2L por dia ya esta bien ");
     }
 }
+
+entrenador();
+hidratacion();
