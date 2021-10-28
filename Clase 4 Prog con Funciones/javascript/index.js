@@ -115,5 +115,16 @@ function entrenador(){
         alert("Tu peso de "+ kilaje +" kg ya es suficiente por ahora, coordinemos para nuevos ejercicios")
     } 
 }
-
-
+let consumir = 0;
+function hidratacion(){
+    let liquido = parseFloat(prompt("¿Cuanta agua consumes en, litros,  mientras entrenas?"));
+    let frecLiq = parseFloat(prompt("¿Cuantas veces repites esa cantidad en la semana?"));
+    consumir = liquido * frecLiq;
+    if(consumir < 10){
+        alert("Los "+ consumir +" Litros que ingieres son escasos, trata de llevarlos a 10 (2 por dia)");
+    }else if(consumir == 10){
+        alert("Tu consumo de "+ consumir +" Litros es bueno, mantenlo");
+    }else if(consumir > 10){
+        alert("El consumo de "+ consumir +" Litros´en la semana no es malo en si, pero llevandolo a un promedio de 2L por dia ya esta bien ");
+    }
+}
