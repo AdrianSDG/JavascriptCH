@@ -43,3 +43,4 @@ console.table(entrenador2);
 console.table(entrenador3);
 console.log(alumno1);
 
+
