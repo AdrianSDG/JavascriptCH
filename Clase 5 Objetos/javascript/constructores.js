@@ -23,3 +23,23 @@ function Persona(nombre, edad, calle) {
     console.log(homero);
     console.log(marge);
     console.log(pedro);
+////////////////////////////////////////////////
+//METODOS Y OPERACIONES CON OBJETOS
+
+let str = "dabale arroz a la zorra el abad";
+str.toLowerCase()
+
+function hagamosAlgo(){
+    console.log("correr")
+}
+hagamosAlgo();
+
+const auto = {
+    color:"rojo",
+    encender: function(){
+        console.log("encender")
+    }
+}
+auto.encender();
+
+
