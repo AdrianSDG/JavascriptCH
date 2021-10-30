@@ -13,10 +13,14 @@ class Producto {
     this.vendido = true;
     }
     }
-    const producto1 = new Producto("arroz", "125");
+
+    prod = prompt("Ingresar producto");
+    precio = prompt("ingresar precio");
+
+    const producto1 = new Producto(prod, precio);
     const producto2 = new Producto("fideo", "50");
     producto1.sumaIva();
     producto2.sumaIva();
     producto1.vender();
 
-    
+console.table(producto1);
