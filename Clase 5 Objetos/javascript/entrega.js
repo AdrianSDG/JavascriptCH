@@ -41,5 +41,5 @@ alumno1.trainer();
 console.table(entrenador1);
 console.table(entrenador2);
 console.table(entrenador3);
-console.table(alumno1);
+console.log(alumno1);
 
