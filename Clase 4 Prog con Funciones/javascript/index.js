@@ -99,6 +99,7 @@ function calculadora(primerNumero, segundoNumero, operacion) {
     document.write(calculadora(10, 10, "*"));
 
 //Entrega
+//Entrenador Virtual
 let kilaje = 0;
 function entrenador(){
     let dato1 = parseFloat (prompt("Indica el kilaje total para tren superior delantero por sesion"));
