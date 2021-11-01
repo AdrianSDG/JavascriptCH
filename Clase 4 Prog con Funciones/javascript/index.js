@@ -101,9 +101,9 @@ function calculadora(primerNumero, segundoNumero, operacion) {
 //Entrega
 let kilaje = 0;
 function entrenador(){
-    let dato1 = parseFloat (prompt("Indica el kilaje total para tren superior delantero"));
-    let dato2 = parseFloat (prompt("Indica el kilaje total para espalda"));
-    let dato3 = parseFloat (prompt("Indica el kilaje total para piernas"));
+    let dato1 = parseFloat (prompt("Indica el kilaje total para tren superior delantero por sesion"));
+    let dato2 = parseFloat (prompt("Indica el kilaje total para espalda por sesion"));
+    let dato3 = parseFloat (prompt("Indica el kilaje total para piernas por sesion"));
     let dato4 = parseFloat (prompt("Indica las repeticiones de esas rutinas en la semana"));
     //realizo los calculos
     kilaje = (dato1 + dato2 + dato3) * dato4;
@@ -129,5 +129,17 @@ function hidratacion(){
     }
 }
 
+function recuperacion(){
+    let diasPesas = parseFloat(prompt("¿Cuantos dias ejercitas con pesas"));
+    let diasCardio = parseFloat(prompt("¿Y de cardio?"));
+    if(diasPesas > diasCardio){
+        alert("Te recomiendo descansar dos dias en principio");
+    }else if(diasPesas < diasCardio){
+        alert("Con tres dias de descanso el cuerpo respondera bien");
+    }else if(diasPesas == diasCardio){
+        alert("En ese equilibrio te recomiendo un descanso activo");
+    }
+}
 entrenador();
 hidratacion();
+recuperacion();
