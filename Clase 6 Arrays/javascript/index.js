@@ -44,4 +44,26 @@ console.log(resultado1);
 console.log(resultado2);
 console.log(resultado3);
 
+//Recorriendo arrays
+for(let i=0; i<3; i+=1){
+    console.log(meses[i]);
+    console.log(arrayA[i]);
+    console.log(arrayB[i]);
+    console.log(arrayC[i]);
+    console.log(arrayD[i]);
+    console.log(arrayE[i]);
+    console.log(arrayF[i]);
+}
 
+console.log("PROPIEDADES");
+console.log(meses.length);
+console.log(arrayF.length);
+
+console.log(meses[6]);
+console.log(meses[9]);
+
+meses[6] = "julio";
+console.log(meses[6]);
+
+meses[9] = "octubre";
+console.log(meses);
