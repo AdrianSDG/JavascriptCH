@@ -26,6 +26,12 @@ console.log(typeof arrayE);
 console.log(arrayF);
 console.log(typeof arrayF);
 
+console.log(arrayB[0]);
+console.log(arrayC[1]);
+console.log(arrayD[2]);
+console.log(arrayE[3]);
+console.log(arrayF[3]);
+
 //Otra forma de escribir arrays
 const meses = new Array("enero", "febrero", "marzo", "abril");
 console.log(meses); 
@@ -37,3 +43,5 @@ let resultado3 = numeros[1] + numeros[1]; // 2 + 2 = 4;
 console.log(resultado1);
 console.log(resultado2);
 console.log(resultado3);
+
+
