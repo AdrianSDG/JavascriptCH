@@ -34,3 +34,19 @@ console.log(listaNombres.length);
 const nuevaLista = listaNombres.concat(["ANA","EMA"]);
 //Salida con salto de línea usando join
 alert(nuevaLista.join("\n"));
+///////////////////////////////////////
+
+const carrito = [
+    {nombre: "Monitor 17 pulgadas", precio: 600},
+    {nombre: "Televisor", precio: 900},
+    {nombre: "Tablet", precio: 500},
+    {nombre: "Monitor Inco", precio: 890},
+    {nombre: "Silla Gamer", precio: 1000},
+];
+
+const carArray = carrito.map(function(item) {
+    return ("Articulo "+ item.nombre +" Precio "+ item.precio)
+});
+
+console.log(carrito);
+console.log(carArray);
