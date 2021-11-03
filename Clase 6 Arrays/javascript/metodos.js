@@ -75,7 +75,7 @@ const lengths = names3.map(nombre => nombre.length);//lengths = [3, 3, 4, 4]
 
 /////////////////////////
 //Ejemplo aplicado a Metodos
-articulos = [{ id: 1, producto: "Arroz", precio: 125 },
+const articulos = [{ id: 1, producto: "Arroz", precio: 125 },
 { id: 2, producto: "Fideo", precio: 70 },
 { id: 3, producto: "Pan" , precio: 50},
 { id: 4, producto: "Flan" , precio: 100}];
