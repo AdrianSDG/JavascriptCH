@@ -50,3 +50,39 @@ const carArray = carrito.map(function(item) {
 
 console.log(carrito);
 console.log(carArray);
+/////////////////////////////////////////////////////
+
+//Metodo Find
+const num = [1, 2, 3, 4, 5];
+//La función parámetro generalmente es una función flecha sin cuerpo.
+const encontrado = num.find(elemento => elemento > 3); //Encuentra 4
+const names = ["Ana", "Ema", "Juan"];
+const encontrado2 = names.find(elemento => elemento === "Ema"); //Encuentra "Ema"
+const encontrado3 = names.find(elemento => elemento === "Alan");//undefined
+
+//Metodo Filter
+const filtro1 = num.filter(elemento => elemento > 3); //Encuentra [4,5]
+const filtro2 = num.filter(elemento => elemento < 4); //Encuentra [1,2,3]
+const names2 = ["Ana", "Ema", "Juan", "Elia"];
+//Filtrar nombre que incluyen la letra "n" Encuentra ["Ana","Juan"]
+const filtro3 = names2.filter(elemento => elemento.includes("n"));
+
+//Metodo Map
+const porDos = num.map(x => x * 2); // porDos = [2, 4, 6, 8, 10]
+const masCien = num.map(x => x + 100); 
+const names3 = ["Ana", "Ema", "Juan", "Elia"];
+const lengths = names3.map(nombre => nombre.length);//lengths = [3, 3, 4, 4]
+
+/////////////////////////
+//Ejemplo aplicado a Metodos
+articulos = [{ id: 1, producto: "Arroz", precio: 125 },
+{ id: 2, producto: "Fideo", precio: 70 },
+{ id: 3, producto: "Pan" , precio: 50},
+{ id: 4, producto: "Flan" , precio: 100}];
+const buscarPan = articulos.find(producto => producto.id === 3);
+console.log(buscarPan);//{id: 3, producto: "Pan", precio: 50}
+const baratos = articulos.filter(producto => producto.precio < 100);
+console.log(baratos);//[{id: 2,producto:"Fideo",precio:70},{id:3,producto:"Pan",precio: 50}]
+const aumentos = articulos.map(producto => producto.precio += 30);
+console.log(aumentos);
+//[155, 100, 80, 130] y el valor de cada producto cambio.
