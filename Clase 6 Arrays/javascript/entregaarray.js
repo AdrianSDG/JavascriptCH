@@ -24,7 +24,7 @@ const precioMedio = arrayCoach.filter(tutor => tutor.tarifa < 1700);
 console.log(precioMedio);
 
 const precioAlto = arrayCoach.filter(tutor => tutor.tarifa > 1600);
-console.log(precioMedio);
+console.log(precioAlto);
 
 console.log("Cambio de tarifa");
 const nuevaTar = arrayCoach.map(tutor => tutor.tarifa +=100);
