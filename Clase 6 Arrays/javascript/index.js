@@ -67,3 +67,16 @@ console.log(meses[6]);
 
 meses[9] = "octubre";
 console.log(meses);
+
+const frutas = ['guindas', 'manzanas', 'bananas'];
+//frutas.sort(); // ['bananas', 'guindas', 'manzanas']
+
+const puntos = [1, 10, 2, 21];
+//puntos.sort(); // [1, 10, 2, 21]
+// Tenga en cuenta que 10 viene antes que 2
+// porque '10' viene antes que '2' según la posición del valor Unicode.
+
+const cosas = ['word', 'Word', '1 Word', '2 Words'];
+//cosas.sort(); // ['1 Word', '2 Words', 'Word', 'word']
+// En Unicode, los números vienen antes que las letras mayúsculas
+// y estas vienen antes que las letras minúsculas.
