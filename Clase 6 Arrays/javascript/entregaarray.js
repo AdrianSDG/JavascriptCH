@@ -33,3 +33,6 @@ console.table(nuevaTar);
 console.log("Ingreso de nuevo entrenador");
 arrayCoach.push({coach: "Pedro", tarifa: 1400, estilo:"pesas"});
 console.table(arrayCoach);
+
+//Por la naturaleza del funcionamiento del hoisting, por la forma en que lee javascript, los valores del precios
+//al modificarlos, se van a ver cambiados desde el principio
