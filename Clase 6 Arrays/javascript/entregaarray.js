@@ -13,10 +13,10 @@ const buscMarcel = arrayCoach.find(tutor => tutor.coach === "Marcel");
 console.log(buscMarcel);
 
 console.log("Filtro por estilos");
-const buscHit = arrayCoach.find(tutor => tutor.estilo ==="HIT");
+const buscHit = arrayCoach.filter(tutor => tutor.estilo ==="HIT");
 console.log(buscHit);
 
-const buscFyp = arrayCoach.find(tutor => tutor.estilo === "funcional y pesas");
+const buscFyp = arrayCoach.filter(tutor => tutor.estilo === "funcional y pesas");
 console.log(buscFyp);
 
 console.log("Filtro por precios");
