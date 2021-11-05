@@ -53,6 +53,7 @@ alumn.sort(function(a,b){return a.nivel - b.nivel});
 //alumn.sort(function(a,b){return b.nivel - a.nivel});
 console.table(alumn);
 
+function ordAlum(){}
 
 
 
