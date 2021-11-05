@@ -36,3 +36,24 @@ console.table(arrayCoach);
 
 //Por la naturaleza del funcionamiento del hoisting, por la forma en que lee javascript, los valores del precios
 //al modificarlos, se van a ver cambiados desde el principio
+
+//Segunda Entrega
+const alumn = [{nombre: "Jorge", edad: 32, nivel:5},
+{nombre: "Joaquin", edad: 25, nivel:2},
+{nombre: "Martin", edad: 27, nivel:1},
+{nombre: "Marta", edad: 29, nivel:3},
+{nombre: "Sofia", edad: 30, nivel:4},
+{nombre: "Juan", edad: 31, nivel:6},];
+
+alumn.sort(function(a, b){return a.edad - b.edad});
+//alumn.sort(function(a, b){return b.edad - a.edad});
+console.table(alumn);
+
+alumn.sort(function(a,b){return a.nivel - b.nivel});
+//alumn.sort(function(a,b){return b.nivel - a.nivel});
+console.table(alumn);
+
+
+
+
+
