@@ -17,7 +17,7 @@ function Alumno(nombre, edad, sexo, objetivo, tiempo){
     this.objetivo = objetivo;
     this.tiempo = tiempo;
     this.trainer = function(){
-        if(tiempo <= 3){
+        if(tiempo <= 5){
             alert("Tu mejor opcion es Albert")
         }else if(tiempo >= 6 && tiempo <= 12){
             alert("Tu mejor opcion es Samantha")
