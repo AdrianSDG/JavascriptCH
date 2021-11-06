@@ -45,16 +45,25 @@ const alumn = [{nombre: "Jorge", edad: 32, nivel:5},
 {nombre: "Sofia", edad: 30, nivel:4},
 {nombre: "Juan", edad: 31, nivel:6},];
 
-alumn.sort(function(a, b){return a.edad - b.edad});
+//alumn.sort(function(a, b){return a.edad - b.edad});
 //alumn.sort(function(a, b){return b.edad - a.edad});
-console.table(alumn);
+//console.table(alumn);
 
-alumn.sort(function(a,b){return a.nivel - b.nivel});
+//alumn.sort(function(a,b){return a.nivel - b.nivel});
 //alumn.sort(function(a,b){return b.nivel - a.nivel});
-console.table(alumn);
+//console.table(alumn);
 
-function ordAlum(){}
-
+function ordAlum(){
+    let opcion = prompt("¿Deseas ordenar por edad o nivel?");
+    if(opcion === "edad"){
+        alumn.sort(function(a, b){return a.edad - b.edad});
+        console.table(alumn)
+    }else if(opcion === "nivel"){
+        alumn.sort(function(a,b){return a.nivel - b.nivel})
+        console.table(alumn)
+    }
+};
+ordAlum();
 
 
 
