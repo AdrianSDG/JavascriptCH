@@ -41,4 +41,7 @@ let paises = document.getElementsByClassName("paises");
 //Eliminando el primer elemento de clase paises
 paises[0].parentNode.removeChild(paises[0])
 
-
+///////////////////////////////////////////////////////
+//Obtener datos de Inputs
+document.getElementById("nombre").value = "HOMERO";
+document.getElementById("edad").value = 39;
