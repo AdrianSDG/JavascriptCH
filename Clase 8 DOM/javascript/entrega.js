@@ -30,34 +30,38 @@ console.table(arrayCoach);
     { coach: "Max", tarifa: 1900, estilo:"funcional y pesas", nivel: 1},];
 
     
-    let seleccion = prompt("Elije un estilo");
+    let seleccion = prompt("Elije un estilo dentro de HIT, HIT y pesas, funcional y pesas o unicamente pesas");
     if(seleccion === "HIT"){
         for (const trainer of hit){
             let seleccion = document.createElement("div");
     seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
     <p> Tarifa: ${trainer.tarifa}</p>
-    <b> Estilo ${trainer.estilo}</b>`;
+    <b> Estilo ${trainer.estilo}</b>
+    <b> Nivel ${trainer.nivel}</b>`;
     document.body.appendChild(seleccion);
     }}else if(seleccion === "HIT y pesas"){
         for (const trainer of hitYpes){
             let seleccion = document.createElement("div");
     seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
     <p> Tarifa: ${trainer.tarifa}</p>
-    <b> Estilo ${trainer.estilo}</b>`;
+    <b> Estilo ${trainer.estilo}</b>
+    <b> Nivel ${trainer.nivel}</b>`;
     document.body.appendChild(seleccion);
     }}else if(seleccion === "pesas"){
         for (const trainer of pesas){
             let seleccion = document.createElement("div");
     seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
     <p> Tarifa: ${trainer.tarifa}</p>
-    <b> Estilo ${trainer.estilo}</b>`;
+    <b> Estilo ${trainer.estilo}</b>
+    <b> Nivel ${trainer.nivel}</b>`;
     document.body.appendChild(seleccion);
     }}else if(seleccion === "funcional y pesas"){
         for (const trainer of funcPesa){
             let seleccion = document.createElement("div");
     seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
     <p> Tarifa: ${trainer.tarifa}</p>
-    <b> Estilo ${trainer.estilo}</b>`;
+    <b> Estilo ${trainer.estilo}</b>
+    <b> Nivel ${trainer.nivel}</b>`;
     document.body.appendChild(seleccion);
     }}else{alert("Ingresa un estilo valido")}
 
