@@ -1,6 +1,6 @@
 console.log("Clase 9 Eventos");
 
-//OPCION 0(ejemplo de profesor,no funciona)
+//OPCION 0
 let botonDos = document.getElementById("segBoton")
 botonDos.addEventListener("click", function(){
     console.log("Has presionado el segundo boton");
@@ -20,4 +20,16 @@ botonTres.onclick = () =>{console. log("Respuesta de boton 3 ")}
 //OPCION 3
 //Es la forma onclick desde el parrafo dentro del html
 
+//Con imagenes(no me funciona)
+//let caras = document.querySelector("img")-------puedo usarlo si tengo solo una imagen
+let caras = document.getElementById("happyface")
+caras.addEventListener("mouseenter", confundido);
+caras.addEventListener("mouseout", feliz);
+
+function confundido(){
+    caras.setAttribute("src","./img/confuced face emoji.jpg");
+}
+function feliz(){
+    caras.setAttribute("src","./img/happy emoji.jpg");
+}
 
