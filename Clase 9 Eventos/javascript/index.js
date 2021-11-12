@@ -20,7 +20,7 @@ botonTres.onclick = () =>{console. log("Respuesta de boton 3 ")}
 //OPCION 3
 //Es la forma onclick desde el parrafo dentro del html
 
-//Con imagenes(no me funciona)
+//Con imagenes
 //let caras = document.querySelector("img")-------puedo usarlo si tengo solo una imagen
 let caras = document.getElementById("happyface")
 caras.addEventListener("mouseenter", confundido);
