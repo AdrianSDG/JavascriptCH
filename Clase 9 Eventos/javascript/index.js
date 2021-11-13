@@ -32,4 +32,29 @@ function confundido(){
 function feliz(){
     caras.setAttribute("src","./img/happy emoji.jpg");
 }
+///////////////////////////////////////////////////////////////
+let bloque =document.getElementById("divstyl")
+bloque.addEventListener("click", ()=>{
+    console.log("click")
+});
+
+bloque.addEventListener("mousedown", ()=>{
+    console.log("down")
+});
+
+bloque.addEventListener("mouseup", ()=>{
+    console.log("up")
+});
+
+bloque.addEventListener("mouseover", ()=>{
+    console.log("over")
+});
+
+bloque.addEventListener("mouseout", ()=>{
+    console.log("out")
+});
+
+bloque.addEventListener("mousemove", ()=>{
+    console.log("move")
+});
 
