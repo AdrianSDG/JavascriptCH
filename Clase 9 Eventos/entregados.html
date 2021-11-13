@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 9 Entrega Dos</title>
+</head>
+<body>
+    <form id="contacto" action="">
+            <legend>COMUNICATE CON NOSOTROS</legend>
+        <p>
+            <label for="nombre" id="nombre" name="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required> 
+        </p>
+        <p>
+            <label for="apellido" id="apellido" name="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+        </p>
+        <p>
+            <label for="email" id="email" name="emai">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Mail@sitio.com">
+        </p>
+        <p>
+            <label for="telefono" id="telefono" name="telefono">Teléfono:</label>
+            <input type="number" name="telefono" id="telefono">
+        </p>
+        <p>
+            <textarea name="comentarios" id="comentarios" cols="30" rows="10">
+                Escribe brevemente sobre las experiencias que buscas.
+            </textarea>
+       </p>
+        <p>
+             <label for="tarjeta" id="tarjeta" name="tarjeta">
+                 <span>Dinos la disciplina que te interesa</span>
+             </label>
+             <select name="grupo" id="grupo">
+                 <option value="HIT">HIT</option>
+                 <option value="HITpesas">HIT y pesas</option>
+                 <option value="pesas">pesas</option>
+                 <option value="funcpesas">funcional y pesas</option>
+             </select>
+            </p>
+            <p>
+                <input type="submit" value="Enviar Datos">
+            </p>
+            <p>
+                <input type="reset" value="Borrar Datos">
+            </p>
+    </form>
+    <script src="./javascript/entregados.js"></script>
+</body>
+</html>
