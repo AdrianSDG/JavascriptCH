@@ -58,3 +58,4 @@ seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
 <b> Nivel ${trainer.nivel}</b>`;
 document.body.appendChild(seleccion);
 }}  
+///////////////////////////////////////////////////////////////////////////////////////////
