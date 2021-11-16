@@ -5,6 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase 9 Entrega Dos</title>
+<style>
+    #contacto{
+        text-align: center;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color:wheat
+    }
+
+    #enviar{
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 20px;
+        background-color: green;
+    }
+    #borrar{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 20px;
+        background-color: red;
+    }
+
+    
+</style>
 </head>
 <body>
     <form id="contacto" action="">
@@ -36,16 +56,16 @@
              </label>
              <select name="grupo" id="grupo">
                  <option value="HIT">HIT</option>
-                 <option value="HITpesas">HIT y pesas</option>
+                 <option value="HIT y pesas">HIT y pesas</option>
                  <option value="pesas">pesas</option>
-                 <option value="funcpesas">funcional y pesas</option>
+                 <option value="funcional y pesas">funcional y pesas</option>
              </select>
             </p>
             <p>
-                <input type="submit" value="Enviar Datos">
+                <input id="enviar" type="submit" value="Enviar Datos">
             </p>
             <p>
-                <input type="reset" value="Borrar Datos">
+                <input id="borrar" type="reset" value="Borrar Datos">
             </p>
     </form>
     <script src="./javascript/entregados.js"></script>
