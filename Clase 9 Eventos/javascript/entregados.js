@@ -6,8 +6,8 @@ function validarForm(evt){
 evt.preventDefault ();
 document.write("Por favor corrobora que tus datos son los que ingresaste");
 let formulario = evt.target;
-document.write(formulario.children[ 0].value);
-document.write(formulario.children[ 1].value);
-document.write(formulario.children[ 2].value);
-document.write(formulario.children[ 3].value);
+document.write("<p>"+ formulario.nombre.value +"</p>");
+document.write("<p>"+ formulario.apellido.value +"</p>");
+document.write("<p>"+ formulario.email.value +"</p>");
+document.write("<p>"+ formulario.telefono.value +"</p>");
 }
