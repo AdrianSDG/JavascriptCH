@@ -1,5 +1,5 @@
 console.log("Entrenador Virtual (Segunda Entrega)");
-////////////////////////////////////////////ARRAYS
+//////////////////////////////////////////////////////ARRAYS
 const arrayCoach = [{coach: "Marcel", tarifa: 2000, estilo:"HIT y pesas", nivel: 3},
 { coach: "Samantha", tarifa: 1200, estilo:"HIT", nivel: 1},
 { coach: "Brandon", tarifa: 1500, estilo:"HIT y pesas", nivel: 1},
@@ -31,6 +31,7 @@ botonUno.addEventListener ("click", respbotUno)
 function respbotUno(){
     for (const trainer of coachNuno){
         let seleccion = document.createElement("div");
+        seleccion.setAttribute("id","nUno");
 seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
 <p> Tarifa: ${trainer.tarifa}</p>
 <b> Estilo ${trainer.estilo}</b>
@@ -62,9 +63,14 @@ seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
 document.body.appendChild(seleccion);
 }}
 
-////////////////////////////////////////////INGRESO DE ALUMNO
+//////////////////////////////////////////////////////INGRESO DE ALUMNO
 let botonAlum = document.getElementById("ingAlum")
 botonAlum.addEventListener("click",ingDatos)
+function ingDatos(){ nombre = prompt("Hola,¿Como te llamas?");
+edad = parseFloat(prompt("Dime tu edad"));
+sexo = prompt(" Dime tu sexo");
+objetivo = prompt("Muy brevemente, ¿Que buscas?");
+tiempo = parseFloat(prompt("¡Cuantos meses deseas entrenar?"));
 function Alumno(nombre, edad, sexo, objetivo, tiempo){
     this.nombre = nombre;
     this.edad = edad;
@@ -82,14 +88,9 @@ function Alumno(nombre, edad, sexo, objetivo, tiempo){
     }
 
 }
-function ingDatos(){nombre = prompt("Hola,¿Como te llamas?");
-edad = parseFloat(prompt("Dime tu edad"));
-sexo = prompt(" Dime tu sexo");
-objetivo = prompt("Muy brevemente, ¿Que buscas?");
-tiempo = parseFloat(prompt("¡Cuantos meses deseas entrenar?"))};
-  
-
 const alumno1 = new Alumno(nombre, edad, sexo, objetivo, tiempo,);
 
 alumno1.trainer();
-console.log(alumno1);
+console.log(alumno1);}
+
+//////////////////////////////////////////////////////
