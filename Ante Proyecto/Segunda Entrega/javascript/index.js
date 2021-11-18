@@ -144,6 +144,3 @@ botonHidra.addEventListener("click", hidratacion)
 
 let botonRecup = document.getElementById("recup")
 botonRecup.addEventListener("click", recuperacion)
-//entrenador();
-//hidratacion();
-//recuperacion();
