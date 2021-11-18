@@ -62,6 +62,34 @@ seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
 document.body.appendChild(seleccion);
 }}
 
+////////////////////////////////////////////INGRESO DE ALUMNO
+let botonAlum = document.getElementById("ingAlum")
+botonAlum.addEventListener("click",ingDatos)
+function Alumno(nombre, edad, sexo, objetivo, tiempo){
+    this.nombre = nombre;
+    this.edad = edad;
+    this.sexo = sexo;
+    this.objetivo = objetivo;
+    this.tiempo = tiempo;
+    this.trainer = function(){
+        if(tiempo <= 5){
+            alert("Te recomendamos como tutor al grupo de nivel 1")
+        }else if(tiempo >= 6 && tiempo <= 12){
+            alert("Te recomendamos como tutor al grupo de nivel 2")
+        }else if(tiempo > 12){
+            alert("Te recomendamos como tutor al grupo de nivel 2 o 3")
+        }
+    }
 
+}
+function ingDatos(){nombre = prompt("Hola,¿Como te llamas?");
+edad = parseFloat(prompt("Dime tu edad"));
+sexo = prompt(" Dime tu sexo");
+objetivo = prompt("Muy brevemente, ¿Que buscas?");
+tiempo = parseFloat(prompt("¡Cuantos meses deseas entrenar?"))};
+  
 
-////////////////////
+const alumno1 = new Alumno(nombre, edad, sexo, objetivo, tiempo,);
+
+alumno1.trainer();
+console.log(alumno1);
