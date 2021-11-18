@@ -93,4 +93,57 @@ const alumno1 = new Alumno(nombre, edad, sexo, objetivo, tiempo,);
 alumno1.trainer();
 console.log(alumno1);}
 
-//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////FUNCIONES ENTRENAMIENTO
+let kilaje = 0;
+function entrenador(){
+    let dato1 = parseFloat (prompt("Indica el kilaje total que usas por repeticion para pecho"));
+    let dato2 = parseFloat (prompt("Bien, ahora dime el kilaje total que usas en las repeticiones de epalda"));
+    let dato3 = parseFloat (prompt("Ahora indica el kilaje total en piernas"));
+    let dato4 = parseFloat (prompt("Indica las repeticiones de esas rutinas en la semana"));
+    //realizo los calculos
+    kilaje = (dato1 + dato2 + dato3) * dato4;
+    if (kilaje < 100){
+        alert("Manten una semana y aumenta el peso de " + kilaje + " kg unos 50kg")
+    }else if(kilaje >= 100 && kilaje <= 200){
+        alert("Los "+ kilaje + " kg estan bien, manten el peso pero aumenta las repeticiones en la semana")
+    }else if( kilaje > 200){
+        alert("Tu peso de "+ kilaje +" kg ya es suficiente por ahora, coordinemos para nuevos ejercicios")
+    } 
+}
+let consumir = 0;
+function hidratacion(){
+    let liquido = parseFloat(prompt("¿Cuanta agua consumes, en litros,  mientras entrenas?"));
+    let frecLiq = parseFloat(prompt("¿Cuantas veces repites esa cantidad en la semana?"));
+    consumir = liquido * frecLiq;
+    if(consumir < 10){
+        alert("Los "+ consumir +" Litros que ingieres son escasos, trata de llevarlos a 10 (2 por dia)");
+    }else if(consumir == 10){
+        alert("Tu consumo de "+ consumir +" Litros es bueno, mantenlo");
+    }else if(consumir > 10){
+        alert("El consumo de "+ consumir +" Litros´en la semana no es malo en si, pero llevandolo a un promedio de 2L por dia ya esta bien ");
+    }
+}
+
+function recuperacion(){
+    let diasPesas = parseFloat(prompt("¿Cuantos dias ejercitas con pesas"));
+    let diasCardio = parseFloat(prompt("¿Y de cardio?"));
+    if(diasPesas > diasCardio){
+        alert("Te recomiendo descansar dos dias en principio");
+    }else if(diasPesas < diasCardio){
+        alert("Con tres dias de descanso el cuerpo respondera bien");
+    }else if(diasPesas == diasCardio){
+        alert("En ese equilibrio te recomiendo un descanso activo");
+    }
+}
+
+let botonEntren = document.getElementById("entrenador")
+botonEntren.addEventListener("click", entrenador)
+
+let botonHidra = document.getElementById("hidra")
+botonHidra.addEventListener("click", hidratacion)
+
+let botonRecup = document.getElementById("recup")
+botonRecup.addEventListener("click", recuperacion)
+//entrenador();
+//hidratacion();
+//recuperacion();
