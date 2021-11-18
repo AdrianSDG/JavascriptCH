@@ -37,7 +37,7 @@ body{
 }
 
 #nUno{
-    width: 200px; height: 100px; overflow-y: scroll;
+    width: 200px; height: 100px; overflow: auto;
 }
 
 #ingAlum{
