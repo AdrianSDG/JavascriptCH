@@ -1,0 +1,11 @@
+#contacto{
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    background-color:wheat
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to top,grey,wheat);
+}

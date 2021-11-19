@@ -59,3 +59,9 @@ body{
     font-family: 'Caesar Dressing', cursive; 
     font-size: 25px;
 }
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to top,grey,wheat);
+}
