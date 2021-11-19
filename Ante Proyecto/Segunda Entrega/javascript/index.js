@@ -91,7 +91,9 @@ function Alumno(nombre, edad, sexo, objetivo, tiempo){
 const alumno1 = new Alumno(nombre, edad, sexo, objetivo, tiempo,);
 
 alumno1.trainer();
-console.log(alumno1);}
+console.log(alumno1);
+const alumJson = JSON.stringify(alumno1);
+localStorage.setItem("alumno1", alumJson);}
 
 //////////////////////////////////////////////////////FUNCIONES ENTRENAMIENTO
 let kilaje = 0;
