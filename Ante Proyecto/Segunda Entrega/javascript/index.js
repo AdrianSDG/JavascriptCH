@@ -146,3 +146,15 @@ botonHidra.addEventListener("click", hidratacion)
 
 let botonRecup = document.getElementById("recup")
 botonRecup.addEventListener("click", recuperacion)
+//////////////////////////////////////////////////////IMAGENES
+
+let caraG = document.getElementById("gokumirando")
+caraG.addEventListener("mouseenter", gokuApr);
+caraG.addEventListener("mouseout", gokuMir);
+
+function gokuApr(){
+    caraG.setAttribute("src","./img/goku dedo.jpg");
+}
+function gokuMir(){
+    caraG.setAttribute("src","./img/goku mirando.jpg");
+}
