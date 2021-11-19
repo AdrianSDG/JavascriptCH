@@ -13,6 +13,7 @@ footer{
     font-family: 'Caesar Dressing', cursive; 
     border-radius: 40px;
     align-items: center;
+    opacity: 0.9;
 }
 
 footer a{
