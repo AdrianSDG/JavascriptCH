@@ -31,7 +31,6 @@ botonUno.addEventListener ("click", respbotUno)
 function respbotUno(){
     for (const trainer of coachNuno){
         let seleccion = document.createElement("div");
-        seleccion.setAttribute("id","nUno");
 seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
 <p> Tarifa: ${trainer.tarifa}</p>
 <b> Estilo ${trainer.estilo}</b>
