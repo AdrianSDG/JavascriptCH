@@ -158,3 +158,6 @@ function gokuApr(){
 function gokuMir(){
     caraG.setAttribute("src","./img/goku mirando.jpg");
 }
+
+//////////////////////////////////////////////////////FORMULARIO
+
