@@ -165,10 +165,9 @@ miForm.addEventListener ("submit", validarForm);
 function validarForm(evt){
 evt.preventDefault ();
 let formulario = evt.target;
-for (const formulario of miForm){
-let seleccion = document.createElement("div");
-    seleccion.innerHTML = `<p> ${formulario.nombre.value}</p>`;
-    `<p> ${formulario.apellido.value}</p>`;
-    `<p> ${formulario.email.value}</p>`;
-    `<p> ${formulario.grupo.value}</p>`;
-    document.body.appendChild(seleccion);}}
+    let select = document.createElement("div");
+    select.innerHTML = `<p> ${formulario.nombre.value}</p>;
+    <p> ${formulario.apellido.value}</p>;
+    <p> ${formulario.email.value}</p>;
+    <p> ${formulario.grupo.value}</p>`;
+    document.body.appendChild(select);}
