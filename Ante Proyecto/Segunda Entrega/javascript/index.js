@@ -31,10 +31,11 @@ botonUno.addEventListener ("click", respbotUno)
 function respbotUno(){
     for (const trainer of coachNuno){
         let seleccion = document.createElement("div");
+        seleccion.setAttribute("class", "bU");
 seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
 <p> Tarifa: ${trainer.tarifa}</p>
-<b> Estilo ${trainer.estilo}</b>
-<b> Nivel ${trainer.nivel}</b>`;
+<p> Estilo: ${trainer.estilo}</p>
+<p> Nivel: ${trainer.nivel}</p>`;
 document.body.appendChild(seleccion);
 }}
 
@@ -43,10 +44,11 @@ botonDos.addEventListener("click", respbotDos)
 function respbotDos(){
     for (const trainer of coachNdos){
         let seleccion = document.createElement("div");
+        seleccion.setAttribute("class", "bD");
 seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
 <p> Tarifa: ${trainer.tarifa}</p>
-<b> Estilo ${trainer.estilo}</b>
-<b> Nivel ${trainer.nivel}</b>`;
+<p> Estilo: ${trainer.estilo}</p>
+<p> Nivel: ${trainer.nivel}</p>`;
 document.body.appendChild(seleccion);
 }}
 
@@ -55,10 +57,11 @@ botonTres.addEventListener("click", respbotTres)
 function respbotTres(){
     for (const trainer of coachNtres){
         let seleccion = document.createElement("div");
+        seleccion.setAttribute("class", "bT");
 seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
 <p> Tarifa: ${trainer.tarifa}</p>
-<b> Estilo ${trainer.estilo}</b>
-<b> Nivel ${trainer.nivel}</b>`;
+<p> Estilo: ${trainer.estilo}</p>
+<p> Nivel: ${trainer.nivel}</p>`;
 document.body.appendChild(seleccion);
 }}
 

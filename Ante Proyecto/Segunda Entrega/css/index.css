@@ -8,6 +8,8 @@
 
 h3{
     font-family: 'Arbutus', cursive;
+    font-size: 30px;
+    color:rgb(49, 23, 5);
 }
 
 h2{
@@ -17,6 +19,7 @@ h2{
 
 p,b{
     font-family: 'Caesar Dressing', cursive;
+    font-size: 25px;
 }
 
 body{
@@ -47,6 +50,11 @@ body{
     margin: 20px;
     font-family: 'Caesar Dressing', cursive; 
     font-size: 25px;
+}
+
+.bU,.bD, .bT{
+    display: flex;
+    flex-direction: row;
 }
 
 #ingAlum{
