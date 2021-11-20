@@ -129,9 +129,9 @@ function hidratacion(){
 function recuperacion(){
     let diasPesas = parseFloat(prompt("¿Cuantos dias ejercitas con pesas"));
     let diasCardio = parseFloat(prompt("¿Y de cardio?"));
-    if(diasPesas > diasCardio){
+    if(diasPesas < diasCardio){
         alert("Te recomiendo descansar dos dias en principio");
-    }else if(diasPesas < diasCardio){
+    }else if(diasPesas > diasCardio){
         alert("Con tres dias de descanso el cuerpo respondera bien");
     }else if(diasPesas == diasCardio){
         alert("En ese equilibrio te recomiendo un descanso activo");
@@ -165,9 +165,10 @@ miForm.addEventListener ("submit", validarForm);
 function validarForm(evt){
 evt.preventDefault ();
 let formulario = evt.target;
+for (const formulario of miForm){
 let seleccion = document.createElement("div");
     seleccion.innerHTML = `<p> ${formulario.nombre.value}</p>`;
     `<p> ${formulario.apellido.value}</p>`;
     `<p> ${formulario.email.value}</p>`;
     `<p> ${formulario.grupo.value}</p>`;
-    document.body.appendChild(seleccion);}
+    document.body.appendChild(seleccion);}}
