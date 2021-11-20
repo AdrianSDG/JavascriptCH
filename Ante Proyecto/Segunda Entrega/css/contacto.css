@@ -5,6 +5,19 @@
     opacity: 0.9;
 }
 
+#enviar{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    background-color: green;
+    border-radius: 15px;
+}
+#borrar{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    background-color: red;
+    border-radius: 15px;
+}
+
 footer{
     display: flex;
     justify-content: center;

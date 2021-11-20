@@ -160,4 +160,14 @@ function gokuMir(){
 }
 
 //////////////////////////////////////////////////////FORMULARIO
-
+let miForm = document .getElementById ("contacto");
+miForm.addEventListener ("submit", validarForm);
+function validarForm(evt){
+evt.preventDefault ();
+let formulario = evt.target;
+let seleccion = document.createElement("div");
+    seleccion.innerHTML = `<p> ${formulario.nombre.value}</p>`;
+    `<p> ${formulario.apellido.value}</p>`;
+    `<p> ${formulario.email.value}</p>`;
+    `<p> ${formulario.grupo.value}</p>`;
+    document.body.appendChild(seleccion);}
