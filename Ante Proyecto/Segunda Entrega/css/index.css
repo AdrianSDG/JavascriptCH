@@ -20,7 +20,8 @@ p,b{
 }
 
 body{
-    background-image:linear-gradient(to right,#F1F2B5,#135058);
+    background-image: url("../img/1564728165Olympians-god_-_1.jpg");
+    background-size: 100%;
 }
 
 .btnfunc{
@@ -66,11 +67,13 @@ body{
     background-image: linear-gradient(to top,rgb(49, 193, 230),rgb(36, 150, 170));
     height: 130px;
     font-size: 50px;
-    font-family: 'Fascinate Inline', cursive;
+    font-family: 'Caesar Dressing', cursive; 
     border-radius: 40px;
     align-items: center;
+    border: 7px solid chocolate;
 }
 
 #fooInd a{
     color: black;
 }
+
