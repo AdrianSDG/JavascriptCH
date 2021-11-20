@@ -162,8 +162,8 @@ function gokuMir(){
     caraG.setAttribute("src","./img/goku mirando.jpg");
 }
 
-//////////////////////////////////////////////////////FORMULARIO
-let miForm = document .getElementById ("contacto");
+//////////////////////////////////////////////////////FORMULARIO(no funciona correctamente)
+/*let miForm = document .getElementById ("contacto");
 miForm.addEventListener ("submit", validarForm);
 function validarForm(evt){
 evt.preventDefault ();
@@ -173,4 +173,4 @@ let formulario = evt.target;
     <p> ${formulario.apellido.value}</p>;
     <p> ${formulario.email.value}</p>;
     <p> ${formulario.grupo.value}</p>`;
-    document.body.appendChild(select);}
+    document.body.appendChild(select);}*/
