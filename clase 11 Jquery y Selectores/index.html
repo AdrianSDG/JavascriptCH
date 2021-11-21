@@ -7,11 +7,40 @@
     <title>Clase 11 Jquery y Selectores</title>
 </head>
 <body>
+    <h1>Clase 11 Jquery y Selectores</h1>
+    <button>Click</button>
+    <ul id="listaPaises">
+        <li class="paises"></li>
+        <li class="paises"></li>
+        <li class="paises"></li>
+        <li class="paises"></li>
+        <li class="paises"></li>
+    </ul>
     <!--Link desde un cdn(Content Delivery Network)-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!--Link local desde src-->
-    <script src="./javascript/index.js"></script>
+    <!--<script src="./javascript/index.js"></script>-->
     <!--Link desde un cdn(Content Delivery Network)-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>-->
+<script>
+    let btn = document.querySelector('button');
+    console.log(btn);
+    
+    let btnDos = jQuery('button');
+    console.log(btnDos);
+    
+    let btnTres = $('button');
+    console.log(btnTres);
+
+    const listaPaises = $('#listaPaises');
+    console.log(listaPaises);
+
+    const paises = $('.paises');
+    console.log('paises');
+
+    const li = $('li');
+    console.log(li);
+
+</script>
 </body>
 </html>
