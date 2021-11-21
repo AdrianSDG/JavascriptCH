@@ -2,7 +2,7 @@
     background-color: burlywood;
     font-family: 'Fascinate Inline', cursive;
     text-align: center;
-    border: 7px solid chocolate;
+    border: 7px solid rgb(118, 152, 156);
     border-radius: 25px;
 }
 
@@ -78,7 +78,7 @@ body{
     font-family: 'Caesar Dressing', cursive; 
     border-radius: 40px;
     align-items: center;
-    border: 7px solid chocolate;
+    border: 7px solid rgb(73, 48, 30);
 }
 
 #fooInd a{
