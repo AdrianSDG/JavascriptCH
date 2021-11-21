@@ -33,9 +33,9 @@ function respbotUno(){
         let seleccion = document.createElement("div");
         seleccion.setAttribute("class", "bU");
 seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
-<p> Tarifa: ${trainer.tarifa}</p>
-<p> Estilo: ${trainer.estilo}</p>
-<p> Nivel: ${trainer.nivel}</p>`;
+<p>--Tarifa: ${trainer.tarifa}</p>
+<p>--Estilo: ${trainer.estilo}</p>
+<p>--Nivel: ${trainer.nivel}</p>`;
 document.body.appendChild(seleccion);
 }}
 
@@ -46,9 +46,9 @@ function respbotDos(){
         let seleccion = document.createElement("div");
         seleccion.setAttribute("class", "bD");
 seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
-<p> Tarifa: ${trainer.tarifa}</p>
-<p> Estilo: ${trainer.estilo}</p>
-<p> Nivel: ${trainer.nivel}</p>`;
+<p>--Tarifa: ${trainer.tarifa}</p>
+<p>--Estilo: ${trainer.estilo}</p>
+<p>--Nivel: ${trainer.nivel}</p>`;
 document.body.appendChild(seleccion);
 }}
 
@@ -59,9 +59,9 @@ function respbotTres(){
         let seleccion = document.createElement("div");
         seleccion.setAttribute("class", "bT");
 seleccion.innerHTML = `<h3> Coach: ${trainer.coach}</h3>
-<p> Tarifa: ${trainer.tarifa}</p>
-<p> Estilo: ${trainer.estilo}</p>
-<p> Nivel: ${trainer.nivel}</p>`;
+<p>--Tarifa: ${trainer.tarifa}</p>
+<p>--Estilo: ${trainer.estilo}</p>
+<p>--Nivel: ${trainer.nivel}</p>`;
 document.body.appendChild(seleccion);
 }}
 
