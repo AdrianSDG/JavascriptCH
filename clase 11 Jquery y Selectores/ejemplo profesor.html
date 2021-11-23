@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 11 Ejemplo Profesor</title>
+</head>
+    <div id="app"></div>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+<script>
+    const heroes = [
+        {id:1, nombre:"Barry Alen", alterego:"Flash"},
+        {id:2, nombre:"Bruno Diaz", alterego:"Batman"},
+        {id:3, nombre:"Clark Kent", alterego:"Superman"}
+    ]
+
+    for(const hero of heroes){
+        $('#app').append(`<div>
+            <h3>ID: ${hero.id}
+                <p>Nombre: ${hero.nombre}</p>
+                    <strong> Alterego: ${hero.alterego}</strong>
+                    </div>`)
+    }
+</script>
+</body>
+</html>
