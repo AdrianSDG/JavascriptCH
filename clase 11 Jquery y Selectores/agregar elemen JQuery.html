@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main id="app"></main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+    <script>
+        /* El siguiente código es la equivalencia de creación en JS Vanilla
+var parrafo = document.createElement("p");
+parrafo.innerHTML = "<h2>¡Hola Coder!</h2>";
+document.body.appendChild(parrafo)
+*/
+$('body').append("<p><h2>¡Hola Coder!</h2></p>");
+    
+let producto = { id: 1, nombre: "Arroz", precio: 125 };
+//Es posible usar plantillas de texto en el parámetro.
+$("#app").append(`<div><h3> ID: ${producto.id}</h3>
+<p> Producto: ${producto.nombre}</p>
+<b> $ ${producto.precio}</b></div>`);
+    
+let producto2 = { id: 2, nombre: "Flan", precio: 150 };
+//Es posible usar plantillas de texto en el parámetro.
+$("#app").prepend(`<div><h3> ID: ${producto2.id}</h3>
+<p> Producto: ${producto2.nombre}</p>
+<b> $ ${producto2.precio}</b></div>`);
+    </script>
+</body>
+</html>

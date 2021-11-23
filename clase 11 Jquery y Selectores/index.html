@@ -9,12 +9,13 @@
 <body>
     <h1>Clase 11 Jquery y Selectores</h1>
     <button>Click</button>
+    <!--ul#listaPaises>li.paises*5-->
     <ul id="listaPaises">
-        <li class="paises"></li>
-        <li class="paises"></li>
-        <li class="paises"></li>
-        <li class="paises"></li>
-        <li class="paises"></li>
+        <li class="paises">Item 1</li>
+        <li class="paises">Item 2</li>
+        <li class="paises">Item 3</li>
+        <li class="paises">Item 4</li>
+        <li class="paises">Item 5</li>
     </ul>
     <!--Link desde un cdn(Content Delivery Network)-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -38,9 +39,43 @@
     const paises = $('.paises');
     console.log('paises');
 
-    const li = $('li');
-    console.log(li);
+    const lis = $('li');
+    console.log(lis);
 
+for(let li of lis){
+    console.log(li.textContent);
+}
+
+$( "div" ); //selecciona todos los <div> de la página
+$( "a" ); //selecciona todos los <a>
+$( "p, a" ); //seleccionar todas los los <p>, y los <a>
+$( "li.nombre-clase #caja" );
+//seleccionar todo <li> con clase "nombre-clase", y que tengan un hijo con ID "caja"
+
+console.log($( "p:last" )); //Selecciona el último <p> de la página
+console.log($( "li:first-child" )); //Selecciona todos los <li> que son primeros hijos
+console.log($( "li:last-child" )); //Selecciona todos los <li> que son últimos hijos
+console.log($( "li:only-child" )); //Selecciona todos los <li> que sean hijos únicos
+console.log($( "li:nth-child(3)" )); //Selecciona todos los <li> que sean el 3er elemento
+console.log($( "tr:nth-child(odd)" )); //Selecciona todos los <tr> que sean impares
+console.log($( "tr:nth-child(even)" )); //Selecciona todos los <tr> que sean pares
+console.log($( "div:nth-child(3n)" )); //Selecciona cada tercer elemento <div>
+
+//Usado para formularios
+$( ":text" );
+$( ":checkbox " );
+$( ":radio" );
+$( ":image" );
+$( ":submit" );
+$( ":reset" );
+$( ":password " );
+$( ":file" );
+$( ":input" ); //Selecciona los elementos input, textarea,select y button
+$( ":button" ); //Selecciona los elementos button e input con atributo "type"="button"
+$( ":enabled" ); //Selecciona los elementos del formulario activados
+$( ":disabled " ); //Selecciona los elementos del formulario desactivados
+$( ":checked" ); //Selecciona los radio buttons y checkboxes que están pulsados
+$( ":selected " ); //Elementos de una lista de opciones que este seleccionados
 </script>
 </body>
 </html>
