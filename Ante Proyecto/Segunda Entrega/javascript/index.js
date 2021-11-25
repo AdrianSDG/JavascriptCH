@@ -27,7 +27,7 @@ const coachNtres = [{coach: "Marcel", tarifa: 2000, estilo:"HIT y pesas", nivel:
 
 
 let botonUno = document.getElementById("nivelUno")
-botonUno.addEventListener ("click", respbotUno)
+botonUno.addEventListener("click", respbotUno)
 function respbotUno(){
     for (const trainer of coachNuno){
         let seleccion = document.createElement("div");
@@ -167,10 +167,22 @@ function gokuMir(){
 miForm.addEventListener ("submit", validarForm);
 function validarForm(evt){
 evt.preventDefault ();
-let formulario = evt.target;
-    let select = document.createElement("div");
+let formulario = evt.target; 
+let select = document.createElement("div");
     select.innerHTML = `<p> ${formulario.nombre.value}</p>;
     <p> ${formulario.apellido.value}</p>;
     <p> ${formulario.email.value}</p>;
     <p> ${formulario.grupo.value}</p>`;
     document.body.appendChild(select);}*/
+    let miForm = document .getElementById ("contacto");
+    miForm.addEventListener ("submit", validarForm);
+    function validarForm(evt){
+    evt.preventDefault ();
+    //document.write("<p style='background-color: grey; font-size: 30px'>Por favor corrobora que tus datos son los siguientes: </p>");
+    let formulario = evt.target;
+    document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>"+ miForm.nombre.value +"</p>");
+    document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>"+ miForm.apellido.value +"</p>");
+    document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>"+ miForm.email.value +"</p>");
+    document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>"+ miForm.telefono.value +"</p>");
+    document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>Disciplina elegida: "+ miForm.grupo.value +"</p>");
+    }
