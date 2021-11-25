@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 12: Ready</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    /*$("body").prepend('<button id="btnJquery">Click</button>')
+    .on('click', function(){
+        console.log("Click al boton");
+    });
+
+    $("#btnJquery").on("dblclick", () => {
+        document.write("Efecto doble");
+    });*/
+    //Ejemplo Aplicado
+    // Array de objetos para agregar información al DOM.
+const productos = [{ id: 1, nombre: "Arroz", precio: 125 },
+{ id: 2, nombre: "Fideo", precio: 70 },
+{ id: 3, nombre: "Pan" , precio: 50},
+{ id: 4, nombre: "Flan" , precio: 100}];
+// Recorremos el array con for..of
+for (const producto of productos) {
+//Por cada producto además de los datos agregamos un botón
+$("#app").append(`<div>
+<h4> Producto: ${producto.nombre}</h4>
+<b> $ ${producto.precio}</b>
+<button id="btn${producto.id}">Comprar</button>
+</div>`);
+//Asociamos el evento a botón recién creado.
+$(`#btn${producto.id}`).on('click', function () {
+console.log(`Compreaste ${producto.nombre}`);
+});
+}
+</script>
+
+</body>
+</html>
