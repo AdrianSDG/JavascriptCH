@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 12: Ready</title>
-</head>
-<body>
-    <div id="app"></div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    <title>Clase 12: Metodo Ready</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+    $(document).ready(function() {
     /*$("body").prepend('<button id="btnJquery">Click</button>')
     .on('click', function(){
         console.log("Click al boton");
@@ -38,7 +36,10 @@ $(`#btn${producto.id}`).on('click', function () {
 console.log(`Compreaste ${producto.nombre}`);
 });
 }
+})
 </script>
-
-</body>
+</head>
+<body>
+    <div id="app"></div>
+   </body>
 </html>
