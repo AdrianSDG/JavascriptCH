@@ -7,14 +7,40 @@
     <title>Clase 12: Entrega</title>
 </head>
 <body>
-   <h1>Ingresa los datos para comunicarnos contigo:</h1>
+    <div id="app"></div>
+    <h1>Ingresa los datos para comunicarnos contigo:</h1>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
     crossorigin="anonymous"></script>
 <script>
+    $(document).ready(function(){
+        const arrayCoach = [{coach: "Marcel", tarifa: 2000, estilo:"HIT y pesas", nivel: 3},
+{ coach: "Samantha", tarifa: 1200, estilo:"HIT", nivel: 1},
+{ coach: "Brandon", tarifa: 1500, estilo:"HIT y pesas", nivel: 1},
+{ coach: "Olivia", tarifa: 1700, estilo:"funcional y pesas", nivel: 2},
+{ coach: "Robert", tarifa: 1600, estilo:"HIT", nivel: 2},
+{ coach: "Max", tarifa: 1900, estilo:"funcional y pesas", nivel: 1},
+{ coach: "Michelle", tarifa: 1300, estilo:"pesas", nivel: 1},
+{ coach: "Pedro", tarifa: 1300, estilo:"pesas", nivel: 2},
+{ coach: "Gabriel", tarifa: 1600, estilo:"HIT y pesas", nivel: 2},
+{coach: "Santi", tarifa: 2500, estilo:"pesas", nivel: 3}];
+console.table(arrayCoach);
+for (const trainer of arrayCoach) {
+    $("#app").append(`<div>
+<h4> Coach: ${trainer.coach}</h4>
+<p> $ ${trainer.tarifa}</p>
+<button id="btn${trainer.coach}">Entrena</button>
+</div>`);
+//Asociamos el evento a botón recién creado.
+$(`#btn${trainer.coach}`).on('click', function () {
+alert(`Deseas entrenar con ${trainer.coach}, su estilo es ${trainer.estilo}--Nivel: ${trainer.nivel}`);
+});
+}
+})
+    
     $('body').append(`
     <form id="myForm">    
-        <label for="nombre" id="nomb" name="nombre">Nombre:</label>
+        <label for="nombre" id="nomb" name="nombre">Nombre y Apellido:</label>
         <input type="text" id="nombre" name="nombre">
         <label for="telefono" id="telef" name="telefono">Telefono:</label>
         <input type="number" id="telefono" name="telefono">
