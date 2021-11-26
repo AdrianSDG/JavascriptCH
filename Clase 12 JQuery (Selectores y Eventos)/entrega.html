@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 12: Entrega</title>
+</head>
+<body>
+   <h1>Ingresa los datos para comunicarnos contigo:</h1>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+<script>
+    $('body').append(`
+    <form id="myForm">    
+        <label for="nombre" id="nomb" name="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <label for="telefono" id="telef" name="telefono">Telefono:</label>
+        <input type="number" id="telefono" name="telefono">
+        <input type="submit">
+        </select>
+            </form>
+                `)
+    $("#myForm").submit((evt)=>{
+        evt.preventDefault();
+        let child = $(evt.target).children()
+        console.log(evt.target);
+        alert(`Tu nombre es ${nombre.value}`);
+        alert(`Y tu numero de telefono es ${telefono.value}`);
+    })            
+</script>
+</body>
+</html>
