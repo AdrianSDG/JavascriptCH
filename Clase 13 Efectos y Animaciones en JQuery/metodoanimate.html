@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 13: Metodo Animate</title>
+</head>
+<body>
+    <button>Animacion 2</button>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta 
+        nemo voluptas animi corporis suscipit quas inventore quis a assumenda, ut maiores 
+        sapiente iusto dolores quae nisi enim omnis asperiores similique.
+    </p>
+    <div style="background-color: brown; height: 100px; width: 100px;  position: absolute;"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    /*Animacion 1
+    //Agregamos un parrafo con jQuery
+$("body").prepend('<p class="titulo">Code House</p>');
+//Animamos sus propiedades CSS con animate
+$(".titulo").animate({ left:'250px',
+opacity:'0.5',
+height:'150px',
+width:'150px' }, //1er parámetro propiedades
+"slow", //2do parámetro duración
+function(){ //3er parámetro callback
+document.write("final de animación");
+});*/
+
+//Animacion 2
+/*$('button').click(function (){
+    $('div').animate({left: '300px'});
+})*/
+
+//Animacion 3
+$('button').click(function (){
+    $('div').animate({
+        left: '300px',
+        opacity: '0.5',
+        height: '150px',
+        widht: '150px'
+})});
+</script>
+</body>
+</html>
