@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 13: Efectos y Animaciones en Jquery</title>
+</head>
+<body>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $("body").prepend('<h1 style="display: none" >¡Hola Coder1!</h1>');
+    $("body").prepend('<h1 style="display: none" >¡Hola Coder2!</h1>');
+//Con esto habilito a que sean visibles
+    $('h1').show();
+    
+    $("body").prepend('<h2>¡Hola Coder3!</h2>');
+    $("body").prepend('<h2>¡Hola Coder4!</h2>');
+//Con esto hago que nose vean
+    $('h2').hide();
+
+    $("body").prepend('<h3 style="display: none">¡Hola Coder5!</h3>');
+    $('h3').fadeIn(5000);
+    
+    $("body").prepend('<h4>¡Hola Coder6!</h4>');
+    $('h4').fadeOut(5000);
+</script>
+</body>
+</html>
