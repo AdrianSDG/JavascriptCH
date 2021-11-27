@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 13: Ejemplo Aplicado 1</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    //Agregamos una estructura con jQuery
+$("body").prepend(`</div>
+<a>Ir a contacto</a>
+<p style="height: 800px"></p>
+<section id="seccionContacto">
+<h4>¡Somos Coders!</h4>
+</section>
+</div>`);
+// Asociamos la animación al click en un elemento <a>
+$('a').click( function(e) {
+e.preventDefault();
+//Animamos sus propiedades CSS con animate
+$('html, body').animate({
+scrollTop: $("#seccionContacto").offset().top
+}, 2000);
+} );
+</script>
+</body>
+</html>
