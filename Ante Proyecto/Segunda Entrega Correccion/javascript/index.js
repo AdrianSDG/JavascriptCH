@@ -65,12 +65,17 @@ document.body.appendChild(seleccion);
 }}
 
 //////////////////////////////////////////////////////INGRESO DE ALUMNO
+let inpNombre= document.getElementById("nombreAl");
+let inpEdad = document.getElementById("edadAl");
+let  inpObj = document.getElementById("objetivoAl");
+let inpMeses = document.getElementById("mesesAl");
+
 let botonAlum = document.getElementById("ingAlum")
 botonAlum.addEventListener("click",ingDatos)
-function ingDatos(){nombre = document.getElementById("nombreAl");
-edad = document.getElementById("edadAl");
-objetivo = document.getElementById("objetivoAl");
-tiempo = document.getElementById("mesesAl");
+function ingDatos(){nombre = inpNombre.value;
+edad = inpEdad.value;
+objetivo = inpObj.value;
+tiempo = inpMeses.value;
 function Alumno(nombre, edad, objetivo, tiempo){
     this.nombre = nombre;
     this.edad = edad;
@@ -93,3 +98,5 @@ alumno1.trainer();
 console.log(alumno1);
 const alumJson = JSON.stringify(alumno1);
 localStorage.setItem("alumno1", alumJson);}
+
+//////////////////////////////////////////////////////
