@@ -104,4 +104,22 @@ localStorage.setItem("alumno1", alumJson);}
 const alumnoUno = JSON.parse(localStorage.getItem("alumno1"));
 console.log(alumnoUno);
 
-//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////FUNCIONES DE ENTRENAMIENTO
+let kilaje = 0;
+function entrenador(){
+     let dato1 = document.getElementById("kilPecho").value;
+     let dato2 = document.getElementById("kilEspalda").value;
+     let dato3 = document.getElementById("kilPiernas").value; 
+     let dato4 = document.getElementById("repeSem").value;
+    //realizo los calculos
+    kilaje = (dato1 + dato2 + dato3) * dato4;
+    if (kilaje < 100){
+        alert("Manten una semana y aumenta el peso de " + kilaje + " kg unos 50kg")
+    }else if(kilaje >= 100 && kilaje <= 200){
+        alert("Los "+ kilaje + " kg estan bien, manten el peso pero aumenta las repeticiones en la semana")
+    }else if( kilaje > 200){
+        alert("Tu peso de "+ kilaje +" kg ya es suficiente por ahora, coordinemos para nuevos ejercicios")
+    }
+}
+let btnEntrena = document.getElementById("enviarKil")
+btnEntrena.addEventListener("click", entrenador)   

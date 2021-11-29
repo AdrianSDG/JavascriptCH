@@ -109,7 +109,6 @@ function entrenador(){
     if (kilaje < 100){
         alert("Manten una semana y aumenta el peso de " + kilaje + " kg unos 50kg")
     }else if(kilaje >= 100 && kilaje <= 200){
-        let seleccion = document.createElement("div");
         alert("Los "+ kilaje + " kg estan bien, manten el peso pero aumenta las repeticiones en la semana")
     }else if( kilaje > 200){
         alert("Tu peso de "+ kilaje +" kg ya es suficiente por ahora, coordinemos para nuevos ejercicios")
