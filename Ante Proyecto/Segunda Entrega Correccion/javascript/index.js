@@ -65,7 +65,7 @@ document.body.appendChild(seleccion);
 }}
 
 //////////////////////////////////////////////////////INGRESO DE ALUMNO
-let inpNombre= document.getElementById("nombreAl");
+let inpNombre = document.getElementById("nombreAl");
 let inpEdad = document.getElementById("edadAl");
 let  inpObj = document.getElementById("objetivoAl");
 let inpMeses = document.getElementById("mesesAl");
@@ -82,7 +82,7 @@ function Alumno(nombre, edad, objetivo, tiempo){
     this.objetivo = objetivo;
     this.tiempo = tiempo;
     this.trainer = function(){
-        if(tiempo <= 5){
+        if(tiempo <= 5 && tiempo != 0){
             alert("Te recomendamos como tutor al grupo de nivel 1")
         }else if(tiempo >= 6 && tiempo <= 12){
             alert("Te recomendamos como tutor al grupo de nivel 2")
