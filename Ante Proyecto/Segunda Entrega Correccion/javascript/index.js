@@ -69,16 +69,19 @@ let inpNombre = document.getElementById("nombreAl");
 let inpEdad = document.getElementById("edadAl");
 let  inpObj = document.getElementById("objetivoAl");
 let inpMeses = document.getElementById("mesesAl");
+let inpGener = document.getElementById("generoAl");
 
 let botonAlum = document.getElementById("ingAlum")
 botonAlum.addEventListener("click",ingDatos)
 function ingDatos(){nombre = inpNombre.value;
 edad = inpEdad.value;
+sexo = inpGener.value;
 objetivo = inpObj.value;
 tiempo = inpMeses.value;
-function Alumno(nombre, edad, objetivo, tiempo){
+function Alumno(nombre, edad, sexo, objetivo, tiempo){
     this.nombre = nombre;
     this.edad = edad;
+    this.sexo = sexo;
     this.objetivo = objetivo;
     this.tiempo = tiempo;
     this.trainer = function(){
@@ -92,11 +95,13 @@ function Alumno(nombre, edad, objetivo, tiempo){
     }
 
 }
-const alumno1 = new Alumno(nombre, edad, objetivo, tiempo,);
+const alumno1 = new Alumno(nombre, edad,sexo, objetivo, tiempo);
 
 alumno1.trainer();
 console.log(alumno1);
 const alumJson = JSON.stringify(alumno1);
 localStorage.setItem("alumno1", alumJson);}
+const alumnoUno = JSON.parse(localStorage.getItem("alumno1"));
+console.log(alumnoUno);
 
 //////////////////////////////////////////////////////
