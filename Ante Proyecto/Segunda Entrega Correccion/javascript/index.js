@@ -106,6 +106,8 @@ console.log(alumnoUno);
 
 //////////////////////////////////////////////////////FUNCIONES DE ENTRENAMIENTO
 let kilaje = 0;
+let entrena = document.getElementById("btnEntrena")
+entrena.addEventListener("click",entrenador)  
 function entrenador(){
      let dato1 = document.getElementById("kilPecho").value;
      let dato2 = document.getElementById("kilEspalda").value;
@@ -121,5 +123,19 @@ function entrenador(){
         alert("Tu peso de "+ kilaje +" kg ya es suficiente por ahora, coordinemos para nuevos ejercicios")
     }
 }
-let btnEntrena = document.getElementById("enviarKil")
-btnEntrena.addEventListener("click", entrenador)   
+ 
+//////////////////////////////////////////////////////FORMULARIO CONTACTO
+let miForm = document .getElementById ("contacto");
+    miForm.addEventListener ("submit", validarForm);
+    function validarForm(evt){
+    evt.preventDefault ();
+    //document.write("<p style='background-color: grey; font-size: 30px'>Por favor corrobora que tus datos son los siguientes: </p>");
+    let formulario = evt.target;
+    let espacio = document.createElement("div");
+    document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>"+ formulario.nombre.value +"</p>");
+    document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>"+ formulario.apellido.value +"</p>");
+    document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>"+ formulario.email.value +"</p>");
+    document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>"+ formulario.telefono.value +"</p>");
+    document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>Disciplina elegida: "+ formulario.grupo.value +"</p>");
+    document.body.appendChild(espacio);
+}
