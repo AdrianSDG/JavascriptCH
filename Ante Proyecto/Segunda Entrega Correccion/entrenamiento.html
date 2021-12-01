@@ -29,9 +29,9 @@
             <form>
             <h1>Hablemos de tu Hidratacion</h1>
             <p>¿Cuanta agua consumes, en litros,  mientras entrenas?</p>
-                <input id="cantAgua" type="text">
+                <input id="cantAgua" type="number">
             <p>¿Cuantas veces repites esa cantidad en la semana?</p>
-                <input id="aguaSemana" type="text">
+                <input id="aguaSemana" type="number">
             <button id="btnHidratacion">Calcular</button>        
             </form>
             </div>
@@ -42,9 +42,9 @@
             <form>
             <h1>Hablemos de tu Recuperacion</h1>
             <p>¿Cuantos dias ejercitas con pesas?</p>
-                <input id="diasPesas" type="text">
+                <input id="diPesas" type="number">
             <p>¿Y de cardio?</p>
-                <input id="diasCardio" type="text">
+                <input id="diCardio" type="number">
             <button id="btnRecup">Calcular</button>        
             </form>
         </div>
@@ -71,6 +71,36 @@ function entrenador(){
         alert("Los "+ kilaje + " kg estan bien, manten el peso pero aumenta las repeticiones en la semana")
     }else if( kilaje > 200){
         alert("Tu peso de "+ kilaje +" kg ya es suficiente por ahora, coordinemos para nuevos ejercicios")
+    }
+}
+    
+let hidr = document.getElementById("btnHidratacion")
+hidr.addEventListener("click", hidratacion)
+let consumir = 0;
+function hidratacion(){
+    let liquido = document.getElementById("cantAgua").value;
+    let frecLiq = document.getElementById("aguaSemana").value;
+    consumir = liquido * frecLiq;
+    if(consumir < 10){
+        alert("Los "+ consumir +" Litros que ingieres son escasos, trata de llevarlos a 10 (2 por dia)");
+    }else if(consumir == 10){
+        alert("Tu consumo de "+ consumir +" Litros es bueno, mantenlo");
+    }else if(consumir > 10){
+        alert("El consumo de "+ consumir +" Litros´en la semana no es malo en si, pero llevandolo a un promedio de 2L por dia ya esta bien ");
+    }
+}
+
+let recup = document.getElementById("btnRecup")
+recup.addEventListener("click", recuperacion)
+function recuperacion(){
+    let diasPesas = document.getElementById("diPesas").value;;
+    let diasCardio = document.getElementById("diCardio").value;;
+    if(diasPesas < diasCardio){
+        alert("Te recomiendo descansar dos dias en principio");
+    }else if(diasPesas > diasCardio){
+        alert("Con tres dias de descanso el cuerpo respondera bien");
+    }else if(diasPesas == diasCardio){
+        alert("En ese equilibrio te recomiendo un descanso activo");
     }
 }
     </script>

@@ -123,13 +123,44 @@ function entrenador(){
         alert("Tu peso de "+ kilaje +" kg ya es suficiente por ahora, coordinemos para nuevos ejercicios")
     }
 }
+
+let hidr = document.getElementById("btnHidratacion")
+hidr.addEventListener("click", hidratacion)
+let consumir = 0;
+function hidratacion(){
+    let liquido = document.getElementById("cantAgua").value;
+    let frecLiq = document.getElementById("aguaSemana").value;
+    consumir = liquido * frecLiq;
+    if(consumir < 10){
+        alert("Los "+ consumir +" Litros que ingieres son escasos, trata de llevarlos a 10 (2 por dia)");
+    }else if(consumir == 10){
+        alert("Tu consumo de "+ consumir +" Litros es bueno, mantenlo");
+    }else if(consumir > 10){
+        alert("El consumo de "+ consumir +" Litros´en la semana no es malo en si, pero llevandolo a un promedio de 2L por dia ya esta bien ");
+    }
+}
+
+let recup = document.getElementById("btnRecup")
+recup.addEventListener("click", recuperacion)
+function recuperacion(){
+    let diasPesas = document.getElementById("diPesas").value;;
+    let diasCardio = document.getElementById("diCardio").value;;
+    if(diasPesas < diasCardio){
+        alert("Te recomiendo descansar dos dias en principio");
+    }else if(diasPesas > diasCardio){
+        alert("Con tres dias de descanso el cuerpo respondera bien");
+    }else if(diasPesas == diasCardio){
+        alert("En ese equilibrio te recomiendo un descanso activo");
+    }
+}
+
  
 //////////////////////////////////////////////////////FORMULARIO CONTACTO
 let miForm = document .getElementById ("contacto");
     miForm.addEventListener ("submit", validarForm);
     function validarForm(evt){
     evt.preventDefault ();
-    //document.write("<p style='background-color: grey; font-size: 30px'>Por favor corrobora que tus datos son los siguientes: </p>");
+    document.write("<p style='background-color: grey; font-size: 30px'>Por favor corrobora que tus datos son los siguientes: </p>");
     let formulario = evt.target;
     let espacio = document.createElement("div");
     document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>"+ formulario.nombre.value +"</p>");
@@ -137,5 +168,7 @@ let miForm = document .getElementById ("contacto");
     document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>"+ formulario.email.value +"</p>");
     document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>"+ formulario.telefono.value +"</p>");
     document.write("<p style='background-color: yellow; text-align: center; font-size: 20px'>Disciplina elegida: "+ formulario.grupo.value +"</p>");
+    document.write('<a href="index.html" style="text-decoration: none;">Olimpo</a>');
+    document.write('<a href="contacto.html" style="text-decoration: none;">Volver a ingresar</a>');
     document.body.appendChild(espacio);
 }
