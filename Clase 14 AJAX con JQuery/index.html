@@ -7,7 +7,9 @@
     <title>Clase 14: Metodos de llamada</title>
 </head>
 <body>
-    <button id="jq">boton</button>    
+    <button id="jq">jquery data</button>    
+    <button id="jqjson">jquery json</button>
+    <button id="jsfetch">javascript fetch</button>
     <p id="loading"></p>
     <div id="results"></div>
     <h2></h2>
@@ -44,6 +46,24 @@
             })
         }
 
+        const jqueryJSON = () => {
+            $.getJSON(`data.json`, (respuesta, estado)=>{
+                if(estado ==="success")
+                {console.log(respuesta)
+                displayList(respuesta)
+            }
+            })
+        }
+
+        const ajaxFetch = () => {
+            fetch(`${baseURL}/users`)
+            .then((res) => res.json())
+            .then((users) => console.log(users))
+            .catch((err) => console.log(err));
+        }
+
+
+
         const displayList = (jsonObject) => {
                 jsonObject.forEach(item => {
                     const {name, username, email, website} = item
@@ -62,8 +82,12 @@
                 });
         }
 
-        const btnJQ = $('#jq')
-        btnJQ.on('click', jqueryData)
+        const btnJQ = $('#jq');
+        const btnJSON = $("#jqjson");
+        const btnJsfetch = document.querySelector("#jsfetch");
+        btnJQ.on('click', jqueryData);
+        btnJSON.on("click", jqueryJSON);
+        btnJsfetch.addEventListener("click", ajaxFetch);
         </script>
 </body>
 </html>
