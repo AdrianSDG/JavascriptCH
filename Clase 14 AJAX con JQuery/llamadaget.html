@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 14: AJAX con JQuery (llamada get)</title>
+</head>
+<body>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+    <script>
+        //Declaramos la url que vamos a usar para el GET
+const URLGET =
+"https://jsonplaceholder.typicode.com/posts"
+//Agregamos un botón con jQuery
+$("body").prepend('<button id="btn1">GET</button>');
+//Escuchamos el evento click del botón agregado
+$("#btn1").click(() => {
+$.get(URLGET, function (respuesta, estado) {
+if(estado === "success"){
+let misDatos = respuesta;
+for (const dato of misDatos) {
+$("body").prepend(`<div>
+<h3>${dato.title}</h3>
+<p> ${dato.body}</p>
+</div>`);
+}
+}
+});
+});
+    </script>
+</body>
+</html>

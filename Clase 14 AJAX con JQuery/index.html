@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 14: Metodos de llamada</title>
+</head>
+<body>
+    <button id="jq">boton</button>    
+    <p id="loading"></p>
+    <div id="results"></div>
+    <h2></h2>
+    <p id="resultasTotal"></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+    <script>
+        const baseURL = "https://jsonplaceholder.typicode.com"
+
+        const loading = document.querySelector("#loading");
+        const results = document.querySelector("#results");
+        const rsTotal = document.querySelector("#resultasTotal");
+
+        const showLoading = () => {
+            loading.style.display ="block";
+        };
+
+        const hideLoading = () => {
+            loading.style.display = "none";
+        };
+
+        const clearResults = () =>{
+            results.innerHTML = "";
+            rsTotal.innerHTML = "";
+        };
+
+        const jqueryData = () => {
+            $.get(`${baseURL}/users`, (respuesta, estado)=>{
+                if(estado ==="success")
+                {console.log(respuesta)
+                displayList(respuesta)
+            }
+            })
+        }
+
+        const displayList = (jsonObject) => {
+                jsonObject.forEach(item => {
+                    const {name, username, email, website} = item
+                    //console.log(name);
+                    //console.log(username);
+                    //console.log(email);
+                
+                    const userDiv = document.createElement('div')
+                    const usuarios = `<div class="employee">
+                        <h2>${name}--${email}</h2>
+                        <p><strong>User:</strong>${username}</p>
+                        <p><strong>User:</strong>${website}</p>
+                        </div>`;
+                        userDiv.innerHTML = usuarios
+                        results.appendChild(userDiv)
+                });
+        }
+
+        const btnJQ = $('#jq')
+        btnJQ.on('click', jqueryData)
+        </script>
+</body>
+</html>
