@@ -109,9 +109,9 @@ let kilaje = 0;
 let entrena = document.getElementById("btnEntrena")
 entrena.addEventListener("click",entrenador)  
 function entrenador(){
-     let dato1 = document.getElementById("kilPecho").value;
-     let dato2 = document.getElementById("kilEspalda").value;
-     let dato3 = document.getElementById("kilPiernas").value; 
+     let dato1 = parseInt(document.getElementById("kilPecho").value);
+     let dato2 = parseInt(document.getElementById("kilEspalda").value);
+     let dato3 = parseInt(document.getElementById("kilPiernas").value); 
      let dato4 = document.getElementById("repeSem").value;
     //realizo los calculos
     kilaje = (dato1 + dato2 + dato3) * dato4;
