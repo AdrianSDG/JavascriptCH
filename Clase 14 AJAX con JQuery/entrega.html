@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 14: Entrega</title>
+</head>
+<body>
+    <form id="contacto">
+        <legend>COMUNICATE CON NOSOTROS</legend>
+    <p>
+        <label for="nombre" name="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required> 
+    </p>
+    <p>
+        <label for="apellido" name="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+    </p>
+    <p>
+        <label for="email" name="emai">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Mail@sitio.com">
+    </p>
+    <p>
+        <label for="telefono"  name="telefono">Teléfono:</label>
+        <input type="number" name="telefono" id="telefono">
+    </p>
+    <p>
+        <textarea name="comentarios" id="comentarios" cols="30" rows="10">
+            Escribe brevemente sobre las experiencias que buscas.
+        </textarea>
+   </p>
+    <p>
+         <label for="tarjeta" id="tarjeta" name="tarjeta">
+             <span>Dinos la disciplina que te interesa</span>
+         </label>
+         <select name="grupo" id="grupo">
+             <option value="HIT">HIT</option>
+             <option value="HIT y pesas">HIT y pesas</option>
+             <option value="pesas">pesas</option>
+             <option value="funcional y pesas">funcional y pesas</option>
+         </select>
+        </p>
+        <p>
+            <input id="enviar" type="submit" value="Enviar Datos">
+        </p>
+        <p>
+            <input id="borrar" type="reset" value="Borrar Datos">
+        </p>
+</form>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+<script>
+    const URLGET =
+"https://jsonplaceholder.typicode.com/posts"
+//Declaramos la información a enviar
+const infoAlum = { nombre = document.getElementById("nombre").value,
+apellido = document.getElementById("apellido").value,
+email = document.getElementById("email").value,
+telefono = document.getElementById("telefono").value,
+grupo = document.getElementById("grupo").value}
+//Escuchamos el evento click del botón agregado
+$("#enviar").click(() => {
+$.post(URLGET, infoAlum ,(respuesta, estado) => {
+if(estado === "success"){
+$("body").prepend(`<div>
+Tus datos han sido guardados:${respuesta.nombre},
+Corrobora tu mail:${respuesta.email} y Telefono:${respuesta.telefono}
+</div>`);
+}
+});
+});
+    
+
+</script>
+</body>
+</html>
