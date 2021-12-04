@@ -98,9 +98,15 @@
     </div>
     <div id="divAnimF">
         <p id="pAnimFT">F <br> U <br> N <br> C <br> I <br> O <br> N <br> A <br> L</p>
+        <p id="pAnimFtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sequi quisquam inventore labore ad molestiae
+            aperiam impedit? 
+           Alias sit eos culpa nam dolore perspiciatis, cumque deserunt odit commodi nemo? Modi.</p>
     </div>
     <div id="divAnimP">
-        <p>P <br> E <br> S <br> A <br> S</p>
+        <p id="pAnimPT">P <br> E <br> S <br> A <br> S</p>
+        <p id="pAnimPtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sequi quisquam inventore labore ad molestiae
+            aperiam impedit? 
+           Alias sit eos culpa nam dolore perspiciatis, cumque deserunt odit commodi nemo? Modi.</p>
     </div>
 </section>
 <footer>
@@ -221,7 +227,7 @@ $('#divAnimH').mouseenter(function(){
     $('#divAnimH').animate({
         opacity: "0.7"})
         $('#divAnimH').css({
-            "background-color":"yellow"})
+            "background-color":"yellow", "border": "5px solid black"})
             $('#pAnimHT').animate({
                 opacity: "0"})
                 $("#pAnimHtext").css({
@@ -235,13 +241,72 @@ $('#divAnimH').mouseout(function(){
     $('#divAnimH').animate({
         opacity: "1"})
         $('#divAnimH').css({
-            "background-color":"crimson"})
+            "background-color":"crimson", "border": "1px solid black"})
             $('#pAnimHT').animate({
                 opacity: "1"})
-               $("#pAnimHtext").css({
-                    "color" :"crimson"
+                $("#pAnimHtext").css({
+                    "color" :"crimson"})
+                    $("#pAnimHtext").animate({
+                        opacity: "0"
                 })
 })
+////////////////////////////////
+$('#divAnimF').mouseenter(function(){
+    $('#divAnimF').animate({
+        opacity: "0.7"})
+        $('#divAnimF').css({
+            "background-color":"yellow", "border": "5px solid black"})
+            $('#pAnimFT').animate({
+                opacity: "0"})
+                $("#pAnimFtext").css({
+                    "color": "red"})
+                    $("#pAnimFtext").animate({
+                        opacity: "1"
+                    })
+})
+
+$('#divAnimF').mouseout(function(){
+    $('#divAnimF').animate({
+        opacity: "1"})
+        $('#divAnimF').css({
+            "background-color":"crimson", "border": "1px solid black"})
+            $('#pAnimFT').animate({
+                opacity: "1"})
+                $("#pAnimFtext").css({
+                    "color" :"crimson"})
+                    $("#pAnimFtext").animate({
+                        opacity: "0"
+                })
+})
+////////////////////////////////
+$('#divAnimP').mouseenter(function(){
+    $('#divAnimP').animate({
+        opacity: "0.7"})
+        $('#divAnimP').css({
+            "background-color":"yellow", "border": "5px solid black"})
+            $('#pAnimPT').animate({
+                opacity: "0"})
+                $("#pAnimPtext").css({
+                    "color": "red"})
+                    $("#pAnimPtext").animate({
+                        opacity: "1"
+                    })
+})
+
+$('#divAnimP').mouseout(function(){
+    $('#divAnimP').animate({
+        opacity: "1"})
+        $('#divAnimP').css({
+            "background-color":"crimson", "border": "1px solid black"})
+            $('#pAnimPT').animate({
+                opacity: "1"})
+                $("#pAnimPtext").css({
+                    "color" :"crimson"})
+                    $("#pAnimPtext").animate({
+                        opacity: "0"
+                })
+})
+
 </script>
 </body>
 </html>
