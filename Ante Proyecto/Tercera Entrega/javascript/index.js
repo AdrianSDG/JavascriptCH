@@ -244,14 +244,15 @@ let miForm = document .getElementById ("contacto");
     miForm.addEventListener ("submit", validarForm);
     function validarForm(evt){
     evt.preventDefault ();
-    document.write("<h1>Por favor corrobora la informacion </h1>");
+    alert("Por favor corrobora la informacion en la seccion inferior");
     let formulario = evt.target;
     let espacio = document.createElement("div");
+    espacio.setAttribute("class","validacion");
     espacio.innerHTML =`<h2>Los datos ingresados son los siguientes:</h2>
     <p>Tu nombre y apellido son ${formulario.nombre.value} ${formulario.apellido.value}</p>
     <p>Tu telefono es ${formulario.telefono.value}</p>
     <p>El email ingresado es ${formulario.email.value} y <br>
-        la disciplina seleccionada fue ${formulario.grupo.value}</p>
-        <p><a href="index.html" style="text-decoration: none;">Olimpo</a><a href="contacto.html" style="text-decoration: none;">Volver a ingresar</a></p>`
+        la disciplina seleccionada fue: ${formulario.grupo.value}</p>
+        <p><a href="contacto.html" style="text-decoration: none;">Volver a ingresar</a></p>`
     document.body.appendChild(espacio);
 }
