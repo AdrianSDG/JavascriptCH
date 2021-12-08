@@ -52,14 +52,13 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
     crossorigin="anonymous"></script>
 <script>
-    const URLGET =
-"https://jsonplaceholder.typicode.com/posts"
+    const URLGET = "https://jsonplaceholder.typicode.com/posts"
 //Declaramos la información a enviar
-const infoAlum = { nombre = document.getElementById("nombre").value,
-apellido = document.getElementById("apellido").value,
-email = document.getElementById("email").value,
-telefono = document.getElementById("telefono").value,
-grupo = document.getElementById("grupo").value}
+const infoAlum = { nombre : document.getElementById("nombre").value,
+apellido : document.getElementById("apellido").value,
+email : document.getElementById("email").value,
+telefono : document.getElementById("telefono").value,
+grupo : document.getElementById("grupo").value}
 //Escuchamos el evento click del botón agregado
 $("#enviar").click(() => {
 $.post(URLGET, infoAlum ,(respuesta, estado) => {
@@ -71,7 +70,20 @@ Corrobora tu mail:${respuesta.email} y Telefono:${respuesta.telefono}
 }
 });
 });
-    
+/*
+const infoAlum = { nombre : document.getElementById("nombre").value,
+
+apellido: document.getElementById("apellido").value,
+
+email: document.getElementById("email").value,
+
+telefono: document.getElementById("telefono").value,
+
+grupo: document.getElementById("grupo").value}
+
+
+
+*/
 
 </script>
 </body>
